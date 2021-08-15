@@ -10,19 +10,19 @@
 
 ### Installing the required packages
 
--  In the root folder of the application, run the following command(s)
+- In the root folder of the application, run the following command(s)
 
-  -  If using yarn run the following command
+- If using yarn run the following command
 
-    ```
-    yarn install
-    ```
+  ```
+  yarn install
+  ```
 
-  - If using npm run the following command
+- If using npm run the following command
 
-    ```
-    npm install
-    ```
+  ```
+  npm install
+  ```
 
 ### Running the application
 
@@ -31,8 +31,6 @@
   ```
 
 - Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-
 
 ### Building the application
 
