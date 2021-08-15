@@ -10,10 +10,11 @@ export const contactsSlice = createSlice({
     },
   },
   reducers: {
+    // Sets the users list
     setContacts: (state, action) => {
       state.users = action.payload;
     },
-
+    // Updates the new contact details
     newContact: (state, action) => {
       let { key, value } = action.payload;
       state.newContact[key] = value;
