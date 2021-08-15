@@ -15,13 +15,16 @@ const getUserContacts = ({ pageNo = 1 }) => {
 };
 
 const addUserContacts = (payload = {}) => {
-  fetch(`${BASE_URL}users`, { method: 'POST', body: payload })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-    })
-    .catch((e) => console.error(e))
-    .catch((e) => console.error(e));
+  return new Promise((resolve, reject) =>
+    fetch(`${BASE_URL}users`, { method: 'POST', body: payload })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data) resolve(data);
+        else reject(null);
+      })
+      .catch((e) => console.error(e))
+      .catch((e) => console.error(e))
+  );
 };
 
-export { getUserContacts };
+export { getUserContacts, addUserContacts };
