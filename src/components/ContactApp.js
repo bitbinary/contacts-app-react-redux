@@ -18,17 +18,21 @@ export default function ContactApp() {
   const [modalVisible, setModalVisible] = useState(false);
 
   useEffect(() => {
+    // Function to get the user contacts- sends request to the API
     userClient.getUserContacts({ pageNo: 2 }).then((users) => {
       dispatch(setContacts(users.data));
     });
   }, []);
-
+  // Function to control the visibility of the New Contact Modal
   function toggleAddNewModal() {
     setModalVisible((prevState) => !prevState);
   }
+
+  // Function to control the visibility of the New Contact Modal- close the modal when clicked outside the Modal
   function handleCancel(e) {
     if (e.target.id === 'addnew-bg') setModalVisible((prevState) => !prevState);
   }
+  // Function to save the user contact- sends request to the API
   function saveContact() {
     userClient
       .addUserContacts(newUser)
