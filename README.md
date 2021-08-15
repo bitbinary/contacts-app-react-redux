@@ -1,7 +1,12 @@
+# DEMO
+
+- https://bitbinary.github.io/contacts-app-react-redux/
+
 # Setting up the App
 
-- Clone the GitHub repo to the local and follow the instruction under **Installing the required packages**
+- Clone the [github]: https://github.com/bitbinary/contacts-app-react-redux.git to the local and follow the instruction under **Installing the required packages**
   OR
+
 - Unzip the zipped folder attached
 
 ### Software Requirements
